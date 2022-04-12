@@ -20,3 +20,6 @@ def about(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+def posts(request):
+    return render(request, "posts.html")
