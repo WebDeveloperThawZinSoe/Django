@@ -1,0 +1,38 @@
+/* Resource */
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-20-04
+
+/* commands */
+CREATE DATABASE testProject;
+CREATE USER myprojectuser WITH PASSWORD 'password';
+ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+ALTER ROLE myprojectuser SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE testProject TO myprojectuser;
+sudo -H pip3 install --upgrade pip
+sudo -H pip3 install virtualenv
+create folder , change directory to that folder make virtualenv , and activate that environment
+pip install django gunicorn psycopg2-binary
+django-admin startproject myproject 
+source myprojectenv/bin/activate
+sudo ufw allow 8000
+manage.py runserver 0.0.0.0:8000
+
+
+/* code */
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'testProject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+
+
+/* data */
+http://159.223.87.30:8000/
+user 
+thaw - 123
+ChanKyone - KBTC@2022@April
