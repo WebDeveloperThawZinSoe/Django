@@ -1,5 +1,7 @@
 /* Resource */
 https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-20-04
+https://arrayoverflow.com/question/Django-keep-server-running/588
+https://ordinarycoders.com/blog/article/django-python-packages
 
 /* commands */
 CREATE DATABASE testProject;
@@ -16,6 +18,8 @@ django-admin startproject myproject
 source myprojectenv/bin/activate
 sudo ufw allow 8000
 manage.py runserver 0.0.0.0:8000
+## python server will run still we close terminal
+nohup sudo python3 manage.py runserver  0.0.0.0:8000 
 
 
 /* code */
