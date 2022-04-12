@@ -14,3 +14,9 @@ def index(request):
     }
     # return response with template and context
     return render(request, "index.html", context)
+
+def about(request):
+    return render(request, "about.html")
+
+def contact(request):
+    return render(request, "contact.html")
